@@ -12,10 +12,13 @@ public class Main {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
 
-            List<Ticket> books = Arrays.asList(objectMapper.readValue(Paths.get("tickets.json").toFile(), Ticket[].class));
+            Response response = objectMapper.readValue(Paths.get("tickets.json").toFile(), Response.class);
 
-            // print books
-            books.forEach(System.out::println);
+            System.out.println(response.tickets.length);
+
+            for (Ticket cat : response.tickets) {
+                System.out.printf("%s %n", cat.getArrival_time());
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

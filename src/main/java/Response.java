@@ -1,3 +1,3 @@
 public class Response {
-    public Ticket[] all;
+    public Ticket[] tickets;
 }

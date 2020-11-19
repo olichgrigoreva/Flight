@@ -8,3 +8,7 @@ java, которая прочитает файл tickets.json и
 Программа должна вызываться из командной строки
 Linux, результаты должны быть представлены в
 текстовом виде.
+
+Project SDK 1.8
+Project language level 8
+Target bytecode version 8
